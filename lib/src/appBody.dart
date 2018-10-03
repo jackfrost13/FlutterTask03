@@ -17,11 +17,12 @@ class _AppBodyState extends State<AppBody> {
         var mydata = json.decode(snapshot.data.toString());
         return RefreshIndicator(
           onRefresh: () async {
-
+            await Future.delayed(Duration(seconds: 2));
             setState(() {
               mydata.shuffle();
+              print(mydata);
             });
-            return await Future.delayed(Duration(seconds: 2));
+            return ;
 
           },
           child: ListView.builder(
