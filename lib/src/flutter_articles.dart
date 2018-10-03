@@ -11,16 +11,17 @@ final gendata = [
       url:
           "https://medium.com/@sidky/using-streambuilder-in-flutter-dcc2d89c2eae",
       by: "Manzurur Rahman Khan",
-      age: "2/1/2018",
+      age: "02/01/2018",
       icon:
           'https://miro.medium.com/fit/c/240/240/1*ar58OUwh0QjXNk776p0USQ.jpeg'),
   Data(
       text: "Simple JSON with Flutter",
       url: "https://flutter.institute/simple-json-with-flutter/",
       by: "Brian Armstrong",
-      age: "3/1/2018",
+      age: "03/01/2018",
       icon:
-          'https://flutter.institute/content/images/2017/11/flutterinstitute.png'),
+          "https://flutter.institute/content/images/2017/11/flutterinstitute.png"
+  ),
   Data(
       text: "Flutter hands on: Building a News App",
       url:
@@ -28,13 +29,14 @@ final gendata = [
       by: "Ankur Kedia",
       age: "26/12/2017",
       icon:
-          'https://cdn-images-1.medium.com/max/140/1*rSGF7OBUjv3Ac2kP_cSjtA@2x.png'),
+          "https://cdn-images-1.medium.com/max/140/1*rSGF7OBUjv3Ac2kP_cSjtA@2x.png"
+  ),
   Data(
       text: 'Using Flutter’s InheritedWidget to hold app state',
       url:
           'https://medium.com/@chemamolins/is-flutters-inheritedwidget-a-good-fit-to-hold-app-state-2ec5b33d023e',
       by: 'Chema Molins',
-      age: '6/1/2018',
+      age: '06/01/2018',
       icon: 'https://cdn-images-1.medium.com/max/800/1*emiGsBgJu2KHWyjluhKXQw.png'
   ),
   Data(
@@ -43,7 +45,7 @@ final gendata = [
     by: "Brian Armstrong",
     icon:
         'https://flutter.institute/content/images/2017/11/flutterinstitute.png',
-    age: '29/1/2018',
+    age: '29/01/2018',
   ),
   Data(
     text: 'Sharing Location using Inherited Widget',
