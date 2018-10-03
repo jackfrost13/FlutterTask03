@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'customList.dart';
+import 'package:task03/src/customList.dart';
 import 'dart:convert';
 
 class AppBody extends StatefulWidget {
@@ -9,30 +9,33 @@ class AppBody extends StatefulWidget {
 }
 
 class _AppBodyState extends State<AppBody> {
+  var mydata;
+
+  void getdata() async
+  {
+    var input= await DefaultAssetBundle.of(context).loadString('json/Database.json');
+    mydata = json.decode(input);
+    print(mydata);
+  }
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: DefaultAssetBundle.of(context).loadString('json/Database.json'),
-      builder: (context, snapshot) {
-        var mydata = json.decode(snapshot.data.toString());
-        return RefreshIndicator(
-          onRefresh: () async {
-            await Future.delayed(Duration(seconds: 2));
-            setState(() {
-              mydata.shuffle();
-              print(mydata);
-            });
-            return ;
-
+    if(mydata == null)getdata();
+    return RefreshIndicator(
+        onRefresh: () async {
+          await Future.delayed(Duration(seconds: 1));
+          setState(() {
+            mydata.shuffle();
+          });
+          print("refresh $mydata");
+        },
+        child: ListView.builder(
+          itemCount: mydata == null ? 0 : mydata.length,
+          itemBuilder: (BuildContext context, int index) {
+            if (index == 0)print("$index 2nd  ${mydata[index]}");
+            return customList(mydata[index]);
           },
-          child: ListView.builder(
-            itemCount: mydata == null ? 0 : mydata.length,
-            itemBuilder: (BuildContext context, int index) {
-              return customList(mydata[index]);
-            },
-          ),
-        );
-      },
-    );
+        ),
+      );
+    }
   }
-}
+
