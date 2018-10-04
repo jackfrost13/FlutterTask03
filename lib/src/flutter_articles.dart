@@ -74,4 +74,11 @@ final gendata = [
       icon: 'https://cdn-images-1.medium.com/max/800/1*kgkF2RMSqGTU98NkJa79dA.png',
       url: 'https://proandroiddev.com/testing-flutter-applications-f961969da86a'
     ),
+  Data(
+      text: 'Build reactive mobile apps in Flutter',
+      by: 'Filip Hracek',
+      age: '01/06/2018',
+      icon: 'https://cdn-images-1.medium.com/fit/c/120/120/1*dZx7Dxmr4VXmjc5U8yDf3w.jpeg',
+      url: 'https://medium.com/flutter-io/build-reactive-mobile-apps-in-flutter-companion-article-13950959e381'
+  ),
 ];
